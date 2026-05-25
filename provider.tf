@@ -8,5 +8,10 @@ terraform {
 }
 
 provider "aws" {
-  # Configuration options
+  default_tags {
+    tags = {
+      Environment = "dev"
+      Created_by  = "terraform"
+    }
+  }
 }
